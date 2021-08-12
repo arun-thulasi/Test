@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "c20c6983-ea3c-4169-93b5-ba1e35cb19f4",
+		"_postman_id": "33510891-ea61-49e7-a40b-7ed7e7078a68",
 		"name": "New Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -8,9 +8,35 @@
 		{
 			"name": "Add Single Task",
 			"request": {
-				"method": "GET",
-				"header": [],
-				"url": null
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mjg3ODc1NjZ9.2DtHPvRv6gqb4K8WvT38jNakHSh9bMcJw0lr2ePCPPw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"child_of_\",\r\n    \"status\":\"Pending\"\r\n   \r\n    \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/todo/addtask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"todo",
+						"addtask"
+					]
+				}
 			},
 			"response": []
 		},
@@ -18,7 +44,13 @@
 			"name": "Add Child Task",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mjg3ODc1NjZ9.2DtHPvRv6gqb4K8WvT38jNakHSh9bMcJw0lr2ePCPPw",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"name\":\"child_of_child\",\r\n    \"status\":\"Pending\",\r\n    \"parentTask\": \"6115194a8714ab3fc088e922\"\r\n    \r\n\r\n}",
@@ -47,8 +79,25 @@
 			"name": "Get All Task",
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": null
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mjg3ODc1NjZ9.2DtHPvRv6gqb4K8WvT38jNakHSh9bMcJw0lr2ePCPPw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/todo/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"todo",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -56,17 +105,51 @@
 			"name": "Get Single Task",
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": null
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mjg3ODc1NjZ9.2DtHPvRv6gqb4K8WvT38jNakHSh9bMcJw0lr2ePCPPw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/todo/611552f39b4c331d2c482689",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"todo",
+						"611552f39b4c331d2c482689"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Delete",
 			"request": {
-				"method": "GET",
-				"header": [],
-				"url": null
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mjg3ODc1NjZ9.2DtHPvRv6gqb4K8WvT38jNakHSh9bMcJw0lr2ePCPPw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/todo/611552f39b4c331d2c482689",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"todo",
+						"611552f39b4c331d2c482689"
+					]
+				}
 			},
 			"response": []
 		},
@@ -101,9 +184,35 @@
 		{
 			"name": "Edit Task",
 			"request": {
-				"method": "GET",
-				"header": [],
-				"url": null
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mjg3ODc1NjZ9.2DtHPvRv6gqb4K8WvT38jNakHSh9bMcJw0lr2ePCPPw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"d\",\r\n    \"status\":\"Completed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/todo/611552f39b4c331d2c482689",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"todo",
+						"611552f39b4c331d2c482689"
+					]
+				}
 			},
 			"response": []
 		}
